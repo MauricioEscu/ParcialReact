@@ -1,0 +1,46 @@
+/* 1. Reset global para eliminar márgenes y paddings del navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Fondo negro absoluto en toda la página */
+html, body, #root {
+  background-color: #000 !important;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* 3. Limpieza de elementos de Bootstrap (elimina sombras y bordes de la línea blanca) */
+.navbar, nav {
+  margin-bottom: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+  background-color: #000 !important;
+}
+
+/* 4. Estilo para el contenedor central de tu app */
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 5. Asegurar visibilidad del texto en buscadores */
+input.form-control {
+  color: #ffffff !important;
+  background-color: #1a1a1a !important;
+}
+
+input.form-control::placeholder {
+  color: #cccccc !important;
+  opacity: 1 !important;
+}
+
+/* 6. Corrección final para evitar bordes blancos residuales */
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden;
+}
