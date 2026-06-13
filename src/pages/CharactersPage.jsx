@@ -171,7 +171,8 @@ const CharactersPage = ({ characters, loading, error, removeCharacter }) => {
                         style={hoveredButtonId === char.id ? {...styles.btnDanger, ...styles.btnDangerHover} : styles.btnDanger}
                         onMouseEnter={() => setHoveredButtonId(char.id)}
                         onMouseLeave={() => setHoveredButtonId(null)}
-                        onClick={() => removeCharacter(char.id)}
+                        onClick={() => {if (window.confirm("¿Estás seguro que quieres eliminar a este luchador del torneo?"))
+                          {removeCharacter(char.id);}}}
                       >
                         Eliminar
                       </button>

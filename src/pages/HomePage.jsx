@@ -80,7 +80,7 @@ const HomePage = () => {
             onMouseEnter={() => setHover('ver')}
             onMouseLeave={() => setHover(null)}
           >
-            Ver Personajes
+            Ver Luchadores Registrados
           </Link>
 
           <Link 
