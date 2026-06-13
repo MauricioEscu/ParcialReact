@@ -25,3 +25,4 @@ SPA (Single Page Application) desarrollada con React y Vite. Consumo de API REST
 4. Para realizar el build: `npm run build`
 
 ## Enlace del proyecto (GitHub Pages)
+ https://mauricioescu.github.io/labo2parcial/
