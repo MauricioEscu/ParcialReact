@@ -9,6 +9,9 @@ Aplicación web desarrollada como Segundo Parcial de Laboratorio de Computación
 - [Villegas Dylan]
 - [Bustos Tomas]
 
+## Repositorio
+https://github.com/mauricioescu/ParcialReact
+
 ## Descripción
 SPA (Single Page Application) desarrollada con React y Vite. Consumo de API REST pública (JSONPlaceholder) con operaciones CRUD completas, gestión de estado con Hooks avanzados y arquitectura limpia.
 
@@ -25,4 +28,4 @@ SPA (Single Page Application) desarrollada con React y Vite. Consumo de API REST
 4. Para realizar el build: `npm run build`
 
 ## Enlace del proyecto (GitHub Pages)
- https://mauricioescu.github.io/labo2parcial/
+  https://mauricioescu.github.io/ParcialReact/

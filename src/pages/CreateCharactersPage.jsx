@@ -1,8 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react'; 
 import { useNavigate } from 'react-router-dom';
 
 const CreateCharactersPage = ({ addCharacter }) => {
   const navigate = useNavigate();
+  const nameInputRef = useRef(null); // Creamos la referencia
+
+  // Foco automático al montar el componente
+  useEffect(() => {
+    if (nameInputRef.current) nameInputRef.current.focus();
+  }, []);
+
   const [formData, setFormData] = useState({ 
     name: '', game: 'MK11', skills: '', image: '', reino: '', frase: '', alineacion: ''
   });
@@ -64,7 +71,15 @@ const CreateCharactersPage = ({ addCharacter }) => {
         {/* Nombre */}
         <div className="mb-3">
           <label style={styles.label}>Nombre:</label>
-          <input type="text" className="form-control" style={styles.input} value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} required />
+          <input 
+            type="text" 
+            className="form-control" 
+            style={styles.input} 
+            value={formData.name} 
+            ref={nameInputRef} // Aplicamos la ref 
+            onChange={(e) => setFormData({...formData, name: e.target.value})} 
+            required 
+          />
         </div>
 
         {/* Alineación */}
