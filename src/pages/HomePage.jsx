@@ -63,16 +63,16 @@ const HomePage = () => {
       <div style={styles.container}>
         <h1 style={styles.header}>Torneo de MortalKombat</h1>
         <p style={styles.lead}>"Test your might"</p>
-        
+
         <p style={{ color: '#aaa', marginBottom: '2rem' }}>
           Administra la lista de guerreros, registra nuevas incorporaciones o elimínalos del torneo.
         </p>
 
         <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
-          <Link 
-            to="/characters" 
-            style={{ 
-              ...styles.btnBase, 
+          <Link
+            to="/characters"
+            style={{
+              ...styles.btnBase,
               background: hover === 'ver' ? '#ff0000' : 'transparent',
               color: hover === 'ver' ? '#fff' : '#ff0000',
               boxShadow: hover === 'ver' ? '0 0 15px #ff0000' : 'none'
@@ -83,10 +83,10 @@ const HomePage = () => {
             Ver Luchadores Registrados
           </Link>
 
-          <Link 
-            to="/characters/nuevo" 
-            style={{ 
-              ...styles.btnBase, 
+          <Link
+            to="/characters/nuevo"
+            style={{
+              ...styles.btnBase,
               background: hover === 'nuevo' ? '#ff0000' : 'transparent',
               color: hover === 'nuevo' ? '#fff' : '#ff0000',
               boxShadow: hover === 'nuevo' ? '0 0 15px #ff0000' : 'none'

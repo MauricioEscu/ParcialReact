@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 import { postsService } from '../services/character.service'; 
 
 export const usePosts = () => {
-  // 1️⃣ ESTADOS PRINCIPALES
+  // Estados Principales
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // 2️⃣ ACCIÓN: Cargar personajes
+  //  Cargar personajes
   useEffect(() => {
     const fetchCharacters = async () => {
       setLoading(true);
@@ -46,23 +46,23 @@ export const usePosts = () => {
     fetchCharacters();
   }, []);
 
-  // 3️⃣ ACCIÓN: Crear personaje (CON VALIDACIÓN DE DUPLICADOS)
+  //  Crear personaje (Con validacion que no se duplique)
   const addCharacter = (newCharacterData) => {
-    // Verificamos si el personaje ya existe (comparando nombres en minúsculas)
+    // Verifica si el personaje ya existe (comparando nombres en minúsculas)
     const yaExiste = characters.some(
       (c) => c.name.toLowerCase() === newCharacterData.name.toLowerCase()
     );
 
     if (yaExiste) {
       alert("¡Error: Este personaje ya ha sido reclutado para el torneo!");
-      return false; // Retornamos false para que el formulario no navegue
+      return false; 
     }
 
     try {
       const nextId = characters.length > 0 ? Math.max(...characters.map(c => c.id)) + 1 : 1;
       const createdCharacter = { id: nextId, ...newCharacterData };
       setCharacters((prev) => [createdCharacter, ...prev]);
-      return true; // Retornamos true si se guardó con éxito
+      return true;
     } catch (err) {
       console.error('Error al guardar:', err.message);
       return false; 

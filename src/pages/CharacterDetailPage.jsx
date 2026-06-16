@@ -13,18 +13,18 @@ const CharacterDetailPage = ({ characters }) => {
     <div className="container mt-5">
       <div className="card bg-dark text-white border-danger shadow-lg p-4">
         <div className="row">
-          
-          {/* Columna Izquierda: Imagen (ocupa 4 de 12 espacios) */}
+
+          {/* Columna Izquierda: Imagen */}
           <div className="col-md-4">
-            <img 
-              src={character.image} 
-              alt={character.name} 
+            <img
+              src={character.image}
+              alt={character.name}
               className="img-fluid rounded border border-danger"
               style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
             />
           </div>
 
-          {/* Columna Derecha: Información (ocupa 8 de 12 espacios) */}
+          {/* Columna Derecha: Información */}
           <div className="col-md-8">
             <h1 className="text-danger fw-bold">{character.name.toUpperCase()}</h1>
             <h4 className="text-secondary">{character.game}</h4>
@@ -34,14 +34,14 @@ const CharacterDetailPage = ({ characters }) => {
             <p className="text-muted mt-4"><em>Reino: {character.reino}</em></p>
             <p className="text-primary mt-4"><strong>Frase: {character.frase}</strong></p>
             <p className="text-info mt-4"><em>Alineación: {character.alineacion}</em></p>
-            
+
             <div className="mt-5">
               <Link to="/characters" className="btn btn-outline-light">
                 ← Volver al Torneo
               </Link>
             </div>
           </div>
-          
+
         </div>
       </div>
     </div>

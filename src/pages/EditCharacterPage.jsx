@@ -12,7 +12,7 @@ const EditCharacterPage = ({ characters, updateCharacter }) => {
     skills: ''
   });
 
-  // 1️⃣ Cargar los datos del personaje al abrir la página
+  // 1️ Cargar los datos del personaje al abrir la página
   useEffect(() => {
     const character = characters.find((c) => c.id === Number(id));
     if (character) {
@@ -30,11 +30,11 @@ const EditCharacterPage = ({ characters, updateCharacter }) => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // 2️⃣ Guardar cambios
+  //  Guardar cambios
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Validación: Solo letras y espacios (Regex)
+    // Validación: Solo letras y espacios 
     const soloLetrasRegEx = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
 
     if (!soloLetrasRegEx.test(formData.name) || !soloLetrasRegEx.test(formData.skills)) {
